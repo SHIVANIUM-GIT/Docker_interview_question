@@ -13,7 +13,7 @@ You want to ensure that your Docker image is rebuilt completely from scratch wit
 ### Command:
 
 ```bash
-docker build --no-cache -t myapp .
+docker build --no-cache --tag myapp .
 ```
 
 ### Explanation:
@@ -31,7 +31,7 @@ You have your Dockerfile located in a different folder and want to build the ima
 ### Command:
 
 ```bash
-docker build -t myapp -f docker/Dockerfile .
+docker build --tag myapp -f docker/Dockerfile .
 ```
 
 ### Explanation:
@@ -49,7 +49,7 @@ You want to tag your Docker image with the current Git commit hash for traceabil
 ### Command:
 
 ```bash
-docker build -t myapp:$(git rev-parse --short HEAD) .
+docker build --tag myapp:$(git rev-parse --short HEAD) .
 ```
 
 ### Explanation:
@@ -94,7 +94,7 @@ You want to include the current date in the Docker image tag for easier version 
 ### Command:
 
 ```bash
-docker build -t myapp:release-$(date +%Y-%m-%d) .
+docker build --tag myapp:release-$(date +%Y-%m-%d) .
 ```
 
 ### Explanation:
