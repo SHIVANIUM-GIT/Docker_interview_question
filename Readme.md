@@ -31,7 +31,7 @@ You have your Dockerfile located in a different folder and want to build the ima
 ### Command:
 
 ```bash
-docker build --tag myapp -f docker/Dockerfile .
+docker build --tag myapp --file docker/Dockerfile .
 ```
 
 ### Explanation:
